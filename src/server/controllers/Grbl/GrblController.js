@@ -1202,6 +1202,11 @@ class GrblController {
 
           this.write('!');
         },
+        'jogCancel': () => {
+          this.feeder.clear();
+          this.event.trigger('jogCancel');
+          this.write('\x85');
+        },
         'cyclestart': () => {
           this.event.trigger('cyclestart');
 
