@@ -943,7 +943,7 @@ class GrblController {
         inuse: true
       });
 
-      this.write('$');
+      this.write('?');
 
       // Emit a change event to all connected sockets
       if (this.engine.io) {
